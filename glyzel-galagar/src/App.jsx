@@ -69,7 +69,7 @@ export function App() {
   const [navigate, setNavigate] = useState(<></>)
 
   return (
-    <main className="relative flex h-screen w-screen items-center justify-center bg-red-400 bg-[url(/src/assets/macos-tahoe-26-5120x2880-22674.jpg)] bg-cover bg-no-repeat">
+    <main className="relative flex h-screen w-screen items-center justify-center  bg-[url(/src/assets/macos-tahoe-26-5120x2880-22674.jpg)] bg-cover bg-no-repeat">
       <div className="flex min-w-[280px] flex-col items-center justify-center px-14 py-10 text-center">
         <p className="text-2xl font-semibold tracking-widest text-white/80">
           FRIDAY 31 MAY
