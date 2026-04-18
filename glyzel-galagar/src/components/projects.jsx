@@ -58,7 +58,7 @@ const projectsData = [
       "An AI-powered house contruction progress monitoring system",
     year: "2026",
     color: "green",
-    tech: ["React","Spring Boot","Langchain4j", "Cloudflare R2"],
+    tech: ["React","Spring Boot","Langchain4j", "Cloudflare R2","AWS Cognito"],
     link: "https://github.com/galazel/infrastrack.git",
   },
   {
@@ -85,7 +85,7 @@ const projectsData = [
       "A repository for my spring boot roadmap projects",
     year: "2025",
     color: "purple",
-    tech: ["React","Spring Boot"],
+    tech: ["React","Spring Boot", "AWS S3", "AWS EC2", "AWS RDS", "Keycloak"],
     link: "https://github.com/galazel/spring-boot-roadmap.git",
   },
   {
