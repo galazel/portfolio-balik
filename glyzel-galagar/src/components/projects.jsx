@@ -143,7 +143,7 @@ const projectsData = [
     title: "OH-OH-PEACE",
     description: "This is a coding platform like leetcode but for oop concepts only.",
     year: "2026",
-    color: "purple",
+    color: "red",
     tech: ["React", "Spring Boot", "Amazon Cognito", "Langchain4j"],
     link: "https://github.com/galazel/oh-oh-peace.git",
   },
