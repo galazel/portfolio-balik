@@ -139,6 +139,14 @@ const projectsData = [
     tech: ["React", "Spring Boot"],
     link: "https://github.com/galazel/rebyu.git",
   },
+  {
+    title: "OH-OH-PEACE",
+    description: "This is a coding platform like leetcode but for oop concepts only.",
+    year: "2026",
+    color: "purple",
+    tech: ["React", "Spring Boot", "Amazon Cognito", "Langchain4j"],
+    link: "https://github.com/galazel/oh-oh-peace.git",
+  },
 ]
 
 function Projects() {
