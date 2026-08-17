@@ -26,17 +26,16 @@ function About() {
             Hi! I am Glyzel
           </p>
           <p className="text-center text-sm text-gray-600 sm:text-left sm:text-base">
-            An aspiring <i>Software Developer</i> with a strong passion for coding and
-            continuous learning. I have experience developing both desktop and
-            web applications through academic projects using C#, JavaScript, and
-            Java.
+            A backend-focused <i>full-stack developer</i> with hands-on experience
+            building and architecting end-to-end software systems using Java,
+            Spring Boot, Python, FastAPI, React, PostgreSQL, and AWS.
           </p>
           <p className="text-center text-sm text-gray-600 sm:text-left sm:text-base">
-            I have a solid foundation in object-oriented programming and
-            hands-on experience with frameworks such as Spring Boot, ReactJS,
-            and Bootstrap. I am eager to join a company that values growth and
-            well-being, where I can contribute, learn, and continuously improve
-            as a developer.
+            I have independently architected and shipped multiple AI-powered
+            platforms, implementing RAG pipelines, LLM integrations, AI agents,
+            vector search, and secure role-based REST APIs. I'm eager to join a
+            company that values growth and well-being, where I can contribute,
+            learn, and continuously improve as a developer.
           </p>
         </div>
       </div>
@@ -58,9 +57,11 @@ function About() {
             LOOK WHAT I CAN <span className="text-green-500">DO</span>
           </p>
           <ul className="list-disc px-6 text-sm sm:text-base">
-            <li>Web Development</li>
+            <li>Backend Architecture &amp; REST API Design</li>
+            <li>AI Engineering (RAG, LLM Integrations, AI Agents)</li>
+            <li>Fullstack Web Development</li>
+            <li>Cloud Infrastructure (AWS)</li>
             <li>Desktop Development</li>
-            <li>Fullstack Development</li>
           </ul>
         </div>
       </div>

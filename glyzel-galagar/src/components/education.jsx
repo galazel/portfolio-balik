@@ -23,37 +23,33 @@ function Education() {
           </p>
 
           <span className="w-fit rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-700">
-            Dean's Lister
+            OWWA Education for Development Scholar
           </span>
         </div>
 
         <p className="text-sm text-gray-500 sm:whitespace-nowrap">
-          2022 - Present
+          2023 - Present
         </p>
       </div>
 
       {/* Item */}
-      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between 
-        gap-2 sm:gap-4 rounded-xl border border-gray-200 
-        bg-gradient-to-b from-white to-gray-50 p-4 sm:p-5 
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between
+        gap-2 sm:gap-4 rounded-xl border border-gray-200
+        bg-gradient-to-b from-white to-gray-50 p-4 sm:p-5
         shadow-sm hover:shadow-md transition">
 
         <div className="flex flex-col gap-2">
           <p className="text-base sm:text-lg font-semibold">
-            Science, Technology, Engineering, and Mathematics
+            Senior High School - Science, Technology, Engineering, and Mathematics Strand
           </p>
 
           <p className="text-gray-600 text-sm">
             University of Cebu Lapu-Lapu and Mandaue
           </p>
-
-          <span className="w-fit rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
-            Academic Scholar
-          </span>
         </div>
 
         <p className="text-sm text-gray-500 sm:whitespace-nowrap">
-          2020 - 2022
+          2022 - 2023
         </p>
       </div>
 

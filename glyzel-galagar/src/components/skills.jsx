@@ -23,6 +23,74 @@ const technicalSkills = [
   { name: "Tailwind CSS", src: "/tailwind.png", category: "Frontend" },
 ]
 
+const skillCategories = [
+  {
+    title: "Backend Development",
+    items: [
+      "Spring Boot",
+      "Spring Security",
+      "Spring Data JPA",
+      "Hibernate",
+      "FastAPI",
+      "REST API Design",
+      "OAuth2",
+      "JWT",
+      "MapStruct",
+      "RabbitMQ",
+      "Flyway",
+      "Microservices",
+      "Modular Monolith",
+    ],
+  },
+  {
+    title: "Artificial Intelligence",
+    items: [
+      "LangChain",
+      "LangGraph",
+      "LangChain4j",
+      "Retrieval-Augmented Generation (RAG)",
+      "Vector Databases (Qdrant, pgvector)",
+      "LLM Tool Calling",
+      "Prompt Engineering",
+      "Embeddings",
+      "Document Ingestion",
+      "Bayesian Knowledge Tracing",
+    ],
+  },
+  {
+    title: "Cloud & DevOps",
+    items: [
+      "AWS (EC2, S3, RDS, Cognito, Lambda)",
+      "Docker Compose",
+      "Railway",
+      "CI/CD",
+    ],
+  },
+  {
+    title: "Databases",
+    items: [
+      "MongoDB",
+      "SQL Server",
+      "Database Design",
+      "ERD Modeling",
+      "SQL Optimization",
+    ],
+  },
+  {
+    title: "Other Languages & Tools",
+    items: [
+      "TypeScript",
+      "C#",
+      "SQL",
+      "IntelliJ IDEA",
+      "Postman",
+      "Maven",
+      "Agile / SDLC",
+      "Unit & Integration Testing",
+    ],
+  },
+]
+
 function Skills() {
   return (
     <section id="skills" className="py-8 sm:py-12 px-4 sm:px-6">
@@ -51,6 +119,35 @@ function Skills() {
               <span className="text-[9px] sm:text-xs text-gray-400 text-center">
                 {skill.category}
               </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Additional Technical Skills */}
+      <div className="mb-8 sm:mb-12">
+        <h3 className="text-lg sm:text-2xl font-semibold mb-4 sm:mb-6 text-center">
+          Additional Technical Skills
+        </h3>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {skillCategories.map((category, index) => (
+            <div
+              key={index}
+              className="rounded-xl border border-gray-200 bg-white p-3 sm:p-4 shadow-sm"
+            >
+              <p className="mb-2 text-sm font-semibold text-green-600 sm:text-base">
+                {category.title}
+              </p>
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                {category.items.map((item, i) => (
+                  <span
+                    key={i}
+                    className="rounded-full bg-gray-100 px-2 py-0.5 text-[10px] sm:text-xs font-medium text-gray-700"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>

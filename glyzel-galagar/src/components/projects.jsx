@@ -87,15 +87,17 @@ const projectsData = [
   },
   {
     title: "Infrastrack",
-    description: "An AI-powered house contruction progress monitoring system",
+    description:
+      "An AI-powered construction monitoring platform connecting contractors with clients, featuring a RAG-based Contractor AI assistant grounded in live project data via LLM tool calling.",
     year: "2026",
     color: "green",
     tech: [
       "React",
       "Spring Boot",
-      "Langchain4j",
-      "Cloudflare R2",
+      "pgvector",
+      "LangChain4j",
       "AWS Cognito",
+      "AWS S3",
     ],
     link: "https://github.com/galazel/infrastrack.git",
   },
@@ -106,6 +108,15 @@ const projectsData = [
     color: "blue",
     tech: ["React", "Spring Boot"],
     link: "https://github.com/galazel/chatmate.git",
+  },
+  {
+    title: "Interbyu",
+    description:
+      "An AI-powered mock interview application that generates role-specific interview questions, evaluates candidate answers, and returns structured feedback.",
+    year: "2026",
+    color: "cyan",
+    tech: ["Python", "FastAPI", "LangChain", "LLM APIs"],
+    link: "https://github.com/galazel/interbyu.git",
   },
   {
     title: "Cancan",
@@ -133,10 +144,11 @@ const projectsData = [
   },
   {
     title: "Rebyu",
-    description: "A centralized platform for studying entrance examinations",
+    description:
+      "A multi-tenant AI-powered review and learning management SaaS platform for IT certification prep, with an AI content generation pipeline and a Bayesian Knowledge Tracing microservice for personalized mastery tracking. Capstone Project.",
     year: "2024",
     color: "gray",
-    tech: ["React", "Spring Boot"],
+    tech: ["React", "Spring Boot", "FastAPI", "LangChain", "Qdrant", "AWS"],
     link: "https://github.com/galazel/rebyu.git",
   },
   {
@@ -153,7 +165,7 @@ function Projects() {
   return (
     <div className="flex h-full flex-col gap-6 p-4 sm:p-6">
       <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">
-        SCHOOL <span className="text-green-500  ">PROJECTS</span>
+        MY <span className="text-green-500  ">PROJECTS</span>
       </h1>
 
       <div className="grid grid-cols-1 gap-6 p-2 sm:grid-cols-2 sm:p-5 lg:grid-cols-3">
