@@ -1,5 +1,10 @@
 import React from "react"
-import { faCode, faBookOpenReader, faGamepad } from "@fortawesome/free-solid-svg-icons"
+import {
+  faCode,
+  faBookOpenReader,
+  faGamepad,
+  faDownload,
+} from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 function About() {
@@ -37,6 +42,14 @@ function About() {
             company that values growth and well-being, where I can contribute,
             learn, and continuously improve as a developer.
           </p>
+          <a
+            href="/Glyzel_Galagar_Resume.pdf"
+            download="Glyzel_Galagar_Resume.pdf"
+            className="mx-auto inline-flex items-center gap-2 rounded-xl bg-green-500 px-4 py-2 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-green-600 hover:shadow-lg sm:mx-0 sm:w-fit sm:text-base"
+          >
+            <FontAwesomeIcon icon={faDownload} />
+            Download Resume
+          </a>
         </div>
       </div>
 
