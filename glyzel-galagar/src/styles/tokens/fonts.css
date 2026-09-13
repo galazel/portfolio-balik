@@ -1,0 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+/* Display: Stellost (self-hosted, from the design system's Stellost Font kit) */
+@font-face{font-family:"Stellost";src:url("/fonts/stellost-webfont.woff2") format("woff2"),url("/fonts/stellost-webfont.woff") format("woff");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Stellost Slanted";src:url("/fonts/stellost_slanted-webfont.woff2") format("woff2"),url("/fonts/stellost_slanted-webfont.woff") format("woff");font-weight:400;font-style:normal;font-display:swap}
+/* Body: Manrope — loaded from Google Fonts CDN per the confirmed handoff decision (no self-hosted binaries were provided). */

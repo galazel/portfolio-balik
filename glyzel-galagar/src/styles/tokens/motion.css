@@ -1,0 +1,13 @@
+:root{
+--dur-fast:120ms;
+--dur-base:220ms;
+--dur-slow:420ms;
+--dur-slower:800ms;
+--ease-out:cubic-bezier(.22,.61,.36,1);
+/* CSS analogue of GSAP back.out(1.7) */
+--ease-bounce:cubic-bezier(.34,1.56,.64,1);
+/* CSS analogue of GSAP elastic.out */
+--ease-elastic:cubic-bezier(.16,1.36,.28,1);
+--lift-hover:-3px;
+--press-scale:.97;
+}

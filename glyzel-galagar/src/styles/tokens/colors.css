@@ -1,0 +1,23 @@
+:root{
+/* base — ink */
+--navy-900:#050F23;--navy-800:#0A1F44;--navy-700:#12305F;--navy-600:#1E4784;--navy-400:#5C7BA8;
+/* base — neutral */
+--white:#FFFFFF;--paper:#FBFCFE;--mist-100:#F2F5F9;--mist-200:#E4EAF2;--mist-300:#CBD5E3;--mist-500:#8A98AC;
+/* base — candy accents */
+--bubblegum:#FF5FA2;--bubblegum-soft:#FFE3EF;
+--mint:#25C08D;--mint-soft:#D9F7EC;
+--lemon:#FFD447;--lemon-soft:#FFF4CF;
+--grape:#7C3AED;--grape-soft:#EDE4FF;
+--sky:#38BDF8;--sky-soft:#DDF2FE;
+/* semantic — text */
+--text-heading:var(--navy-800);--text-body:var(--navy-700);--text-muted:var(--mist-500);--text-inverse:var(--white);--text-accent:var(--bubblegum);--text-link:var(--grape);--text-link-hover:var(--bubblegum);
+/* semantic — surface */
+--surface-page:var(--white);--surface-card:var(--white);--surface-sunken:var(--mist-100);--surface-inverse:var(--navy-800);--surface-translucent:rgba(255,255,255,.72);
+/* semantic — line */
+--border-subtle:var(--mist-200);--border-strong:var(--mist-300);--border-inverse:rgba(255,255,255,.22);
+/* semantic — interactive */
+--action-primary:var(--navy-800);--action-primary-hover:var(--navy-700);--action-accent:var(--bubblegum);--action-accent-hover:#F0468E;--action-focus:var(--grape);
+/* cursor gradient (Canva-inspired custom cursor) */
+--cursor-1:#7C3AED;--cursor-2:#FF5FA2;--cursor-3:#3B82F6;--cursor-4:#22D3EE;
+--gradient-cursor:linear-gradient(135deg,var(--cursor-1),var(--cursor-2) 40%,var(--cursor-3) 72%,var(--cursor-4));
+}
