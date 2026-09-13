@@ -58,10 +58,10 @@ export default function About() {
         <div ref={textRef} style={{ display: "flex", flexDirection: "column", gap: "var(--space-5)" }}>
           <SectionHeading kicker="Allow me to introduce myself" accentWord="ME" accent="mint" size="var(--text-4xl)">ABOUT</SectionHeading>
           <p style={{ maxWidth: "var(--measure)", margin: 0, fontSize: "var(--text-base)", color: "var(--text-body)" }}>
-            A backend-focused developer working in Java and the Spring ecosystem — Spring Boot, Spring Security, Spring Data JPA and Hibernate — alongside Python, FastAPI, React, PostgreSQL and AWS.
+            I'm a full-stack product engineer who builds end-to-end systems with a founder's mindset. I turn complex engineering into viable products — scalable SaaS platforms, intelligent AI agents and adaptive learning tools designed to solve real-world problems.
           </p>
           <p style={{ maxWidth: "var(--measure)", margin: 0, fontSize: "var(--text-base)", color: "var(--text-body)" }}>
-            I have architected and shipped multi-tenant SaaS and AI-powered platforms end to end — RAG pipelines, LLM agents, vector search and secure role-based REST APIs documented with Swagger/OpenAPI. Based in Cebu, Philippines, currently a BSIT student at the University of Cebu Lapu-Lapu and Mandaue.
+            I've taken three AI-powered platforms from idea to working product on my own, owning every layer along the way: architecture, secure APIs, data, cloud and the interface people actually use. I'm an aspiring startup founder building toward a company of my own, based in Cebu, Philippines, and finishing a BS in Information Technology at the University of Cebu Lapu-Lapu and Mandaue.
           </p>
           <div style={{ display: "flex", gap: "var(--space-8)", flexWrap: "wrap" }}>
             <StatBlock value="11" label="Shipped projects" accent="mint" />

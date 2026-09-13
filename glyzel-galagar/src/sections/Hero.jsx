@@ -115,9 +115,9 @@ export default function Hero({ onViewProjects }) {
           Glyzel Galagar
         </h1>
         <div ref={rolesRef} style={{ display: "flex", gap: "var(--space-4)", alignItems: "center", flexWrap: "wrap", justifyContent: "center", fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", fontWeight: "var(--weight-bold)", letterSpacing: "var(--tracking-label)", textTransform: "uppercase", color: "var(--text-muted)" }}>
-          <span>Backend Developer</span>
+          <span>Full-Stack Product Engineer</span>
           <span style={{ width: 6, height: 6, borderRadius: 999, background: "var(--bubblegum)" }} />
-          <span>Full-Stack Developer</span>
+          <span>Aspiring Founder</span>
         </div>
         <div ref={ctaRef} style={{ display: "flex", gap: "var(--space-3)", flexWrap: "wrap", justifyContent: "center", marginBottom: "clamp(0px,calc((100vh - 600px) / 4),60px)" }}>
           <Button variant="accent" size="lg" iconAfter={<span aria-hidden="true">→</span>} onClick={onViewProjects}>View Projects</Button>
