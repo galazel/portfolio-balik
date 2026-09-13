@@ -58,7 +58,7 @@ export default function About() {
         <div ref={textRef} style={{ display: "flex", flexDirection: "column", gap: "var(--space-5)" }}>
           <SectionHeading kicker="Allow me to introduce myself" accentWord="ME" accent="mint" size="var(--text-4xl)">ABOUT</SectionHeading>
           <p style={{ maxWidth: "var(--measure)", margin: 0, fontSize: "var(--text-base)", color: "var(--text-body)" }}>
-            I'm a full-stack product engineer who builds end-to-end systems with a founder's mindset. I turn complex engineering into viable products — scalable SaaS platforms, intelligent AI agents and adaptive learning tools designed to solve real-world problems.
+            I'm a full-stack developer and AI engineer who builds end-to-end systems with a founder's mindset. I turn complex engineering into viable products — scalable SaaS platforms, intelligent AI agents and adaptive learning tools designed to solve real-world problems.
           </p>
           <p style={{ maxWidth: "var(--measure)", margin: 0, fontSize: "var(--text-base)", color: "var(--text-body)" }}>
             I've taken three AI-powered platforms from idea to working product on my own, owning every layer along the way: architecture, secure APIs, data, cloud and the interface people actually use. I'm an aspiring startup founder building toward a company of my own, based in Cebu, Philippines, and finishing a BS in Information Technology at the University of Cebu Lapu-Lapu and Mandaue.
