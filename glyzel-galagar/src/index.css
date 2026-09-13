@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  --badge-tile: clamp(52px, 5.4vw, 88px);
+  --badge-tile: clamp(56px, 6.2vw, 112px);
 }
 
 html {
@@ -39,6 +39,13 @@ body {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-lg);
+  max-width: calc(100vw - 32px);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.dock::-webkit-scrollbar {
+  display: none;
 }
 
 .dock a {
@@ -50,6 +57,8 @@ body {
   color: var(--text-heading);
   text-decoration: none;
   padding: 8px 14px;
+  white-space: nowrap;
+  flex: 0 0 auto;
   border-radius: var(--radius-pill);
   transition: background var(--dur-fast) var(--ease-out), transform var(--dur-base) var(--ease-bounce);
   cursor: pointer;
@@ -81,8 +90,21 @@ body.gg-cursor-on button {
    where scroll-scrub parallax / swipe interactions are also disabled in JS. */
 @media (max-width: 760px) {
   .gg-about-grid,
-  .gg-details-grid {
+  .gg-contact-grid {
     grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+/* Tighter dock links on phones so all five fit or nearly fit. */
+@media (max-width: 480px) {
+  .dock {
+    gap: 2px;
+    padding: 6px;
+  }
+
+  .dock a {
+    padding: 8px 10px;
+    letter-spacing: 0.06em;
   }
 }
 

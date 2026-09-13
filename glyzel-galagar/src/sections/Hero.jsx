@@ -11,24 +11,34 @@ export default function Hero({ onViewProjects }) {
   const nameRef = React.useRef(null);
   const rolesRef = React.useRef(null);
   const ctaRef = React.useRef(null);
-  const badgeRefs = React.useRef([]);
-  badgeRefs.current = [];
+  // Each badge has two wrappers so no two animations ever own the same
+  // element: one for the load-in entrance, one for cursor proximity.
+  const entranceRefs = React.useRef([]);
+  const proximityRefs = React.useRef([]);
 
   const reducedMotion = useReducedMotion();
   const isTouch = useIsTouch();
 
   React.useEffect(() => {
     let onMove = null;
+    const entrance = entranceRefs.current.filter(Boolean);
+    const proximity = proximityRefs.current.filter(Boolean);
+
     const ctx = gsap.context(() => {
       // Staggered entrance: name → role labels → CTA → background badges.
       const tl = gsap.timeline({ defaults: { ease: reducedMotion ? "none" : "back.out(1.4)" } });
       if (reducedMotion) {
-        tl.set([nameRef.current, rolesRef.current, ctaRef.current, ...badgeRefs.current], { opacity: 1, y: 0 });
+        tl.set([nameRef.current, rolesRef.current, ctaRef.current, ...entrance], { opacity: 1, y: 0, scale: 1 });
       } else {
         tl.from(nameRef.current, { opacity: 0, y: 40, duration: 0.9 })
           .from(rolesRef.current, { opacity: 0, y: 24, duration: 0.7 }, "-=0.45")
           .from(ctaRef.current, { opacity: 0, y: 20, duration: 0.7 }, "-=0.4")
-          .from(badgeRefs.current, { opacity: 0, scale: 0.4, duration: 0.6, stagger: 0.04, ease: "back.out(2)" }, "-=0.5");
+          // Explicit end values, then clear GSAP's inline styles so every badge
+          // settles at its natural full size no matter how the entrance ended.
+          .fromTo(entrance,
+            { opacity: 0, scale: 0.4 },
+            { opacity: 1, scale: 1, duration: 0.6, stagger: 0.04, ease: "back.out(2)", clearProps: "opacity,transform" },
+            "-=0.5");
       }
 
       if (isTouch || reducedMotion) return;
@@ -38,14 +48,14 @@ export default function Hero({ onViewProjects }) {
       const layerY = gsap.quickTo(bgLayerRef.current, "y", { duration: 0.6, ease: "power3.out" });
 
       // Per-badge proximity: nearest badges scale up / tilt toward the cursor.
-      const badgeMotion = badgeRefs.current.map((el) => ({
+      const badgeMotion = proximity.map((el) => ({
         el,
         x: gsap.quickTo(el, "x", { duration: 0.35, ease: "power3.out" }),
         y: gsap.quickTo(el, "y", { duration: 0.35, ease: "power3.out" }),
         scale: gsap.quickTo(el, "scale", { duration: 0.35, ease: "power3.out" }),
       }));
 
-      const PROX_RADIUS = 170;
+      const PROX_RADIUS = 190;
       onMove = (e) => {
         const cx = window.innerWidth / 2;
         const cy = window.innerHeight / 2;
@@ -95,14 +105,16 @@ export default function Hero({ onViewProjects }) {
           return (
             <span key={t.label} style={{ position: "absolute", ...pos, top: spot.y + "%" }}>
               <span style={{ display: "inline-block", animation: `gg-float ${5 + (i % 5)}s var(--ease-out) ${i * 0.2}s infinite alternate` }}>
-                <span ref={(el) => el && badgeRefs.current.push(el)} style={{ display: "inline-block" }}>
-                  <TechBadge
-                    iconOnly
-                    label={t.label}
-                    iconSrc={`/tech/${t.icon}`}
-                    rotate={spot.r || 0}
-                    opacity={0.95 - (i % 4) * 0.08}
-                  />
+                <span data-hero-entrance="" ref={(el) => { entranceRefs.current[i] = el; }} style={{ display: "inline-block" }}>
+                  <span data-hero-proximity="" ref={(el) => { proximityRefs.current[i] = el; }} style={{ display: "inline-block" }}>
+                    <TechBadge
+                      iconOnly
+                      label={t.label}
+                      iconSrc={`/tech/${t.icon}`}
+                      rotate={spot.r || 0}
+                      opacity={0.95 - (i % 4) * 0.08}
+                    />
+                  </span>
                 </span>
               </span>
             </span>
