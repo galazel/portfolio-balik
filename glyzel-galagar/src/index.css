@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --badge-tile: clamp(52px, 5.4vw, 88px);
+}
+
 html {
   scroll-behavior: auto;
 }

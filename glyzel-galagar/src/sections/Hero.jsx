@@ -95,13 +95,15 @@ export default function Hero({ onViewProjects }) {
           return (
             <span key={t.label} style={{ position: "absolute", ...pos, top: spot.y + "%" }}>
               <span style={{ display: "inline-block", animation: `gg-float ${5 + (i % 5)}s var(--ease-out) ${i * 0.2}s infinite alternate` }}>
-                <TechBadge
-                  ref={(el) => el && badgeRefs.current.push(el)}
-                  label={t.label}
-                  iconSrc={`/tech/${t.icon}`}
-                  rotate={spot.r || 0}
-                  opacity={0.92 - (i % 4) * 0.1}
-                />
+                <span ref={(el) => el && badgeRefs.current.push(el)} style={{ display: "inline-block" }}>
+                  <TechBadge
+                    iconOnly
+                    label={t.label}
+                    iconSrc={`/tech/${t.icon}`}
+                    rotate={spot.r || 0}
+                    opacity={0.95 - (i % 4) * 0.08}
+                  />
+                </span>
               </span>
             </span>
           );
