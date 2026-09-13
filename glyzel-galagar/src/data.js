@@ -159,5 +159,4 @@ export const AWARDS = [
   { title: "2nd Place, General Information Technology Quiz", org: "11th ICT Congress 2025, SM Seaside Cebu", date: "April 2025", accent: "lemon" },
   { title: "Champion, General Information Technology Quiz", org: "UCLM CCS Days 2025, Mandaue City, Cebu", date: "February 2025", accent: "pink" },
   { title: "OWWA Education for Development Scholarship Program Scholar", org: "Overseas Workers Welfare Administration", date: "July 2023 – Present", accent: "mint" },
-  { title: "Blockchain Technology Workshop — CashScript smart contracts", org: "Certificate of Participation, Mandaue City, Cebu", date: "November 2025", accent: "grape" },
 ];
